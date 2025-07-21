@@ -1,0 +1,36 @@
+{
+  "name": "desafio-darwoft-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "env-cmd -f .env.loc tsc",
+    "dev": "env-cmd -f .env.loc ts-node-dev --respawn ./src/index.ts",
+    "start": "env-cmd -f .env.loc node ./dist/index.js",
+    "docker:build": "docker-compose up -d --build",
+    "docker:up": "docker-compose up -d",
+    "migrate:loc": "env-cmd -f .env.loc npx prisma migrate dev",
+    "migrate:reset:loc": "env-cmd -f .env.loc npx prisma migrate reset"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "prisma": "^6.3.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.11.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "env-cmd": "^10.1.0",
+    "express": "^5.1.0",
+    "joi": "^17.13.3",
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
