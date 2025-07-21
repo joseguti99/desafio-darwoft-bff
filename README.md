@@ -11,6 +11,7 @@ Esta aplicación fue construida con la arquitectura **Backend for Frontend (BFF)
 Asegúrate de tener lo siguiente instalado antes de iniciar el proyecto:
 
 - ✅ [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- Tener Docker Desktop iniciado para que el script pueda levantar los servicios
 - ✅ Node.js versión **22.11.0** instalada de forma global
 
 ## ⚙️ Archivos de entorno

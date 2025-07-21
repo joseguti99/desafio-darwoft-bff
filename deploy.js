@@ -28,11 +28,11 @@ const backendPath = path.join(root, 'back');
         // Backend
         console.log('\n🛠️ Configurando Backend...');
         run('npm install', backendPath);
-        run('npm run build', backendPath);
         run('npm run docker:build', backendPath);
         run('npm run docker:up', backendPath);
         run('npx prisma generate', backendPath);
         run('npm run migrate:loc', backendPath);
+        run('npm run build', backendPath);
         run('npm run start', backendPath);
     } catch (err) {
         console.error('❌ Error en el deploy:', err);
