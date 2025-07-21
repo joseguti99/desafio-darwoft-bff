@@ -1,12 +1,36 @@
-# React + Vite
+# 📝 Node + React - App de Tareas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación fue construida con la arquitectura **Backend for Frontend (BFF)**. Permite a los usuarios:
 
-Currently, two official plugins are available:
+- Crear tareas
+- Marcar tareas como completadas
+- Registrarse e iniciar sesión
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Requisitos previos
 
-## Expanding the ESLint configuration
+Asegúrate de tener lo siguiente instalado antes de iniciar el proyecto:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- ✅ Node.js versión **22.11.0** instalada de forma global
+
+## ⚙️ Archivos de entorno
+
+Antes de ejecutar la aplicación, es necesario contar con los archivos de variables de entorno:
+
+- En el directorio `/back`:
+  - `.env.loc`
+
+- En el directorio `/front`:
+  - `.env.loc`
+  - `.env.prd`
+
+> ⚠️ Asegúrate de que estos archivos estén correctamente configurados para el entorno local y/o productivo.
+
+## 🛠️ Instalación y despliegue
+
+1. Clona este repositorio.
+2. Navega a la raíz del proyecto.
+3. Ejecuta el siguiente script para levantar todos los servicios con Docker:
+
+```bash
+node deploy.js
