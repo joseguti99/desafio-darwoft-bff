@@ -1,11 +1,13 @@
 import axios, { HttpStatusCode } from 'axios'
 import { routesPaths } from '../../routes';
 import Token from '../../cache/token';
+import { RedirectRateLimit } from '../../middlewares/RedirectRateLimit';
 
 const axiosInstance = axios.create({
     baseURL: import.meta.env.VITE_API_URL,
 });
 
+RedirectRateLimit(axiosInstance) // Middleware para cuando la api caiga en rate limit
 
 axiosInstance.interceptors.request.use(
     (config) => {

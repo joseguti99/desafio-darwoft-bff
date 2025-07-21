@@ -13,7 +13,8 @@ const httpStatus = {
     INTERNAL_SERVER_ERROR: 500,
     NOT_IMPLEMENTED: 501,
     BAD_GATEWAY: 502,
-    SERVICE_UNAVAILABLE: 503
+    SERVICE_UNAVAILABLE: 503,
+    TO_MANY_REQUESTS: 429
 }
 
 export default httpStatus;

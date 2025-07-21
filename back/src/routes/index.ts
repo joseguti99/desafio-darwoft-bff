@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { apiLimiter } from '../middlewares/rateLimit';
 
 const routesPath = path.join(__dirname, '.');
 
@@ -33,8 +34,8 @@ export default function routeBuilder(app: any) {
                 if (typeof routeHandler !== 'function') {
                     throw new Error(`El archivo ${file} debe exportar un router válido`);
                 }
-
-                app.use(routeName, routeHandler);
+                // Rate Limit y Mapeo de rutas dinamico
+                app.use(routeName, apiLimiter, routeHandler);
                 console.log('\x1b[32m%s\x1b[0m', `- ${routeName}`);
                 successCount++;
 

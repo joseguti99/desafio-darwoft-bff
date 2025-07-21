@@ -26,6 +26,6 @@ export const routes = [
     {
         path: routesPaths.rateLimit,
         component: <RateLimit/>,
-        requireAuth: false,
+        requireAuth: true,
     }
 ]
